@@ -11,9 +11,9 @@ router.post('/register', function (req, res) {
         username: req.body.username 
       }), req.body.password, function (err, msg) {
         if (err) {
-          res.send(err);
+          res.json(err);
         } else {
-          res.send({ message: "Successful" });
+          res.json({ message: "Successful" });
         }
       }
     )
@@ -33,12 +33,12 @@ router.post('/register', function (req, res) {
   
   router.get('/login-failure', (req, res, next) => {
     console.log(req.session);
-    res.send('Login Attempt Failed.');
+    res.json({message: 'Login Attempt Failed.'});
   });
   
   router.get('/login-success', (req, res, next) => {
     console.log(req.session);
-    res.send('Login Attempt was successful.');
+    res.json({message: 'Login Attempt was successful.'});
   });
   
   /*
