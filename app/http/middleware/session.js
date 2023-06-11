@@ -4,7 +4,7 @@
 */
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const db = require("../db/conn");
+const db = require("../../../db/conn");
 require('dotenv').config();
 
 const sessionKey = process.env.SESSION_KEY;
