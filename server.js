@@ -1,6 +1,6 @@
 const express = require('express');
 const sessionMiddleware = require('./app/http/middleware/session');
-const passport = require('./auth/passport');
+const passport = require('./app/http/middleware/auth/passport');
 
 const loginRoutes = require('./routes/login');
 const userRoutes = require('./routes/user');
