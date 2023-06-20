@@ -10,10 +10,10 @@ const router = express.Router();
     We call 'isAuthenticated' to check if the request is 
     authenticated or not. 
   */
-  router.get('/dashboard', function(req, res) {
+  router.get('/', function(req, res) {
     console.log(req.session)
     if (req.isAuthenticated()) {
-      res.json({ message: 'You made it to the dashboard' })
+      res.json({ message: 'Welcome to dashboard' })
     } else {
       res.json({ message: 'You are not authenticated' })
     }
